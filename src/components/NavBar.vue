@@ -1,36 +1,15 @@
 <template>
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <div class="container">
-      <a class="navbar-brand" href="#">POS App</a>
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-bs-toggle="collapse"
-        data-bs-target="#navbarNav"
-        aria-controls="navbarNav"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link" href="#">Products</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Orders</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Expenses</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Incomes</a>
-          </li>
-         
+  <nav class="bg-gray-100 p-4">
+      <div class='container mx-auto flex items-center'>
+        <h5 class="text-xl font-bold">
+          <router-link to="/">POS App</router-link>
+        </h5>
+
+        <ul class="flex">
+          <li class="px-4"><router-link to="/products">Product</router-link></li>
+          <li class="px-4"><router-link to="/users">Users</router-link></li>
         </ul>
       </div>
-    </div>
   </nav>
 </template>
 
