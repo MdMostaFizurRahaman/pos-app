@@ -1,4 +1,5 @@
 <template>
+  <loading-view v-if="loading"></loading-view>
   <table class="w-full">
   <thead>
     <tr class="">
@@ -22,7 +23,7 @@
       <td class="border p-4">{{product.price}}</td>
       <td class="border p-4">{{truncate(product.description)}}</td>
       <td>
-        <router-link :to="`/products/${product.id}`" class="bg-green-500 text-white px-3 py-1 rounded">View</router-link>
+        <router-link :to="{name:'ProductDetail', params: {id: product.id}}" class="bg-green-500 text-white px-3 py-1 rounded">View</router-link>
       </td>
       <td>
           <button class="bg-blue-500 text-white px-3 py-1 rounded">Edit</button>
@@ -45,6 +46,7 @@ export default {
 
   data(){
     return {
+      loading: true,
       products: [],
     }
   },
@@ -71,6 +73,7 @@ export default {
     axios.get('https://fakestoreapi.com/products?limit=5')
         .then(res => {
           this.products = res.data
+          this.loading = false
         })
         .catch(err => {
           console.log(err)
