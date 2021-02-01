@@ -1,0 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.router-link-active {
+    @apply bg-secondary-600 border-l-4 border-primary-500;
+}

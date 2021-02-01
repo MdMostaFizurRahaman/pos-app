@@ -1,7 +1,7 @@
 import { createApp } from 'vue'
 import App from './App.vue'
 import router from './router'
-import './index.css'
+import './css/app.css'
 import LoadingView from "@/components/layouts/LoadingView";
 import Card from "@/components/layouts/Card";
 
